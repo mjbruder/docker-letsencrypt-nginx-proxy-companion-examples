@@ -43,10 +43,10 @@ services:
       - "../../../volumes/examples/unifi/run:/var/run/unifi"
       - "../../../volumes/examples/unifi/work:/usr/lib/unifi/work"
     ports:
-      - "8843"
-      - "8080"
-      - "8081"
-      - "3478"
+      - "8843:8843"
+      - "8080:8080"
+      - "8081:8081"
+      - "3478:3478/udp"
     environment:
       - VIRTUAL_HOST=unifi.example.com
       - VIRTUAL_NETWORK=nginx-proxy
