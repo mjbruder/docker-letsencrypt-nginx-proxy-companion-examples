@@ -34,6 +34,8 @@ unifi:
   container_name: unifi
   volumes:
     - "../../../volumes/examples/unifi/lib:/var/lib/unifi"
+    - "../../../volumes/examples/unifi/lib/sites/default/config.properties:/var/lib/unifi/sites/default/config.properties"
+    - "../../../volumes/examples/unifi/lib/system.properties:/var/lib/unifi/system.properties"
     - "../../../volumes/examples/unifi/log:/var/log/unifi"
     - "../../../volumes/examples/unifi/run:/var/run/unifi"
     - "../../../volumes/examples/unifi/work:/usr/lib/unifi/work"

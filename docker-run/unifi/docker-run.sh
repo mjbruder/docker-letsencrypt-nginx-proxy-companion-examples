@@ -42,4 +42,6 @@ docker run -d -p 8843:8843 -p 8080:8080 -p 8081:8081 -p 3478:3478/udp \
     -e "VIRTUAL_PROTO=https" \
     -e "LETSENCRYPT_HOST=unifi.example.com" \
     -e "LETSENCRYPT_EMAIL=mail@example.com" \
+    -v $(pwd)/../../volumes/examples/unifi/lib/sites/default/config.properties:/var/lib/unifi/sites/default/config.properties \
+    -v $(pwd)/../../volumes/examples/unifi/lib/system.properties:/var/lib/unifi/system.properties \
     jacobalberty/unifi
